@@ -5,20 +5,20 @@ x = []
 count = []
 match = []
 for i in range(1):
-    line = "1-3 c: ccpc"
+    line = "6-12 f: mqcccdhxfbrhfpf"
     for i in line:
         if i.isalpha():
             match.append(i)
         if i.isdigit():
             count.append(i)
-    #print(count, match)
+    print(count, match)
     for i in range(1, len(match)):
         if match[0] == match[i]:
             temp += 1
-            #print(temp)
+            print(temp)
             if temp >= int(count[0]) and temp <= int(count[1]):
                 print("password valid")
             else:
                 print("password does not match")
-    
+  
 

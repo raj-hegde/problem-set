@@ -1,4 +1,4 @@
-puzzle2 = open("/home/rajeev/personal/advent_code/advent2020/adventpuzzle_2.txt, "r"")
+puzzle2 = open("/home/rajeev/personal/advent_code/advent2020/adventpuzzle_2.txt", "r")
 x = []
 count = []
 match = []

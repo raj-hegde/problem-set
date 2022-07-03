@@ -1,4 +1,4 @@
-puzzle1 = open("advent/adventpuzzle_1.txt", "r")
+puzzle1 = open("/home/rajeev/personal/advent_code/advent2020/adventpuzzle_1.txt", "r")
 puzzle1_data = []
 for x in puzzle1:
     puzzle1_data.append(int(x)) 

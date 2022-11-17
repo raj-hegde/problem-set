@@ -1,5 +1,5 @@
 class Solution:
-    def romanToInt(s):
+    def romanToInt(s): #code without self convention need to figure out self.
         translations = {
             "I": 1,
             "V": 5,

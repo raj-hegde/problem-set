@@ -5,7 +5,7 @@ class Solution:
         for char in s:
             if char in dict.keys():
                 stack.append(dict[char])
-            elif not stack or stack[-1] != char:
+            elif not stack and stack[-1] != char: #need explanation for stack[-1] != char
                 return False
             else:
                 stack.pop()

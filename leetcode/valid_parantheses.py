@@ -3,15 +3,21 @@ class Solution:
         stack = []
         dict = {"(" : ")", "{" : "}", "[" : "]"}
         for char in s:
-            if char in dict.keys():
+            try:
                 stack.append(dict[char])
-            elif not stack and stack[-1] != char: #need explanation for stack[-1] != char
-                return False
-            else:
-                stack.pop()
-        return len(stack) == 0         
-    
-s = "{[]}()" #cases from leet code
+               # print(stack)
+            except KeyError:
+                pass
+        if not stack:
+            return False
+        else:
+            for char in stack:
+                if char in s:
+                    return True
+                else:
+                    return False
+
+s = "([)]" #cases from leet code
 print(Solution.isValid(s))
 
 

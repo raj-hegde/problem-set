@@ -1,17 +1,26 @@
 from typing import List
 class Solution:
   def longestCommonPrefix(self, strs: List[str]) -> str:
-    length = len(strs)
-    res = ''
-    for i in range(1, length-1):
-      for j in range(0, min(len(strs[i]),len(strs[i+1]))):
-        if strs[i][j] == strs[i+1][j]:
-          res += strs[i][j]
-    return res
+    prefix = ''
+
+    if not strs:
+      return prefix
+
+    for i in range(len(strs[0])):
+      char = strs[0][i]
+      for j in range(1, len(strs)):
+        if i == len(strs[j]) or strs[j][i] != char:
+          return prefix
+      
+      prefix += char
+    return prefix
+
+
 
 
   
 strs = ["flower","flow","flight"]
+#strs = ["dog","racecar","car"]
 self = None
 print(Solution.longestCommonPrefix(self, strs))
 

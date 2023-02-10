@@ -23,10 +23,6 @@ class Solution:
     #   prefix += char
     # return prefix
 
-
-  
 strs = ["flower","flow","flight"]
-#strs = ["dog","racecar","car"]
 self = None
-print(Solution.longestCommonPrefix(self, strs))
-
+Solution.longestCommonPrefix(self, strs)

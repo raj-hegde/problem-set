@@ -15,4 +15,4 @@ class Solution:
 
 s = "0P"
 self = None
-print(Solution.isPalindrome(self, s))
+print(Solution.isPalindrome(self, s)) #could use regex for removing spaces and special characters

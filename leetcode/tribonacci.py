@@ -6,6 +6,6 @@ class Solution:
         elif n == 1 or n == 2:
             return 1
         else:
-            return tribonacci(n-3) + tribonacci(n-1) + tribonacci(n-2)
+            return Solution.tribonacci(n-3) + Solution.tribonacci(n-1) + Solution.tribonacci(n-2)
 
-print(tribonacci(25))
+print(Solution.tribonacci(25))

@@ -1,9 +1,9 @@
-list1 = [1,1.23,"123"]
-N = True
-K = 1
-
-def updation(list1, N, K):
-    list1.insert(K, N)
-
-updation(list1, N, K)
-print(list1)
+t = int(input())
+print(t)
+sum = 0
+for a in range(t):
+    n = int(input().strip())
+    for j in range(n):
+        if j % 3 == 0 or j % 5 == 0:
+            sum += j
+print(sum)

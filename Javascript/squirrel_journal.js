@@ -57,3 +57,13 @@ for (let event of journalEvents(JOURNAL)) {
         console.log(event + ":", correlation);
     }
 }
+
+for (let entry of JOURNAL) {
+    if (entry.events.includes("peanuts") &&
+        !entry.events.includes("brushed teeth")) {
+       entry.events.push("peanut teeth");     
+    }
+}
+
+console.log(phi(tableFor("peanut teeth", JOURNAL)));
+// -> 1

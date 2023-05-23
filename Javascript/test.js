@@ -1,19 +1,16 @@
-function findSolution(target){
-  function find(current, history){
-    if (current == target){
-      return history;
-    } else if (current > target){
-      return null;
-    }else{
-      return find((current + 5), `(${history} + 5)`) ||
-             find((current * 3), `(${history} * 3)`);
-    }
-  }
-  return find(1, "1");
+let todoList = [];
+function remember(task) {
+  return todoList.push(task);
+}
+function getTask(){
+  return todoList.shift();
+}
+function rememberUrgently(task){
+  return todoList.unshift(task);
 }
 
-console.log(findSolution(24));
+remember("groceries")
+// console.log(todoList)
 
-/* still need to understand how control flow works and how current is reducing after the second recursive call in
-return statement.
-*/
+console.log(getTask())
+console.log(rememberUrgently())

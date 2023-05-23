@@ -1,16 +1,21 @@
-let todoList = [];
-function remember(task) {
-  return todoList.push(task);
+// let {name} = {name: "Faraji", age: 23}; // how to access age
+// console.log();
+
+
+function range(start, end, step = start < end ? 1 : -1 ){
+  let ans = [];
+  for (i = 0; i <= end; i++){
+   ans.push(i);
+  }
+  return ans;
 }
-function getTask(){
-  return todoList.shift();
-}
-function rememberUrgently(task){
-  return todoList.unshift(task);
+console.log(range(1, 10, 2));
+
+function sum(total){
+  let ans = 0;
+  for (let tot of total){
+   ans += tot;
+  }
+  return ans;
 }
 
-remember("groceries")
-// console.log(todoList)
-
-console.log(getTask())
-console.log(rememberUrgently())

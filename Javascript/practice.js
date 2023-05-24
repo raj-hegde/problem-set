@@ -38,4 +38,4 @@
 // console.log(every2([1,3,5], n => n < 10));
 
 /* Dominant writing direction */
-
+// got to check it out tomorrow 

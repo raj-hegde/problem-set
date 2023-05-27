@@ -38,4 +38,31 @@
 // console.log(every2([1,3,5], n => n < 10));
 
 /* Dominant writing direction */
-// got to check it out tomorrow 
+// got to check it out tomorrow
+
+// function normalize(){
+//     console.log(this.coords.map(n => n / this.length));
+// }
+// normalize.call({coords: [0, 2, 3], length: 5});
+
+// let protoRabbit = {
+//     speak(line) {
+//     console.log(`The ${this.type} rabbit says ${line}`);
+//     }
+// };
+// let killerRabbit = Object.create(protoRabbit);
+// killerRabbit.type = "killer";
+// killerRabbit.speak("SKREEEE!");
+
+// let lengthOfLastWord = function(s){
+//     let arr = s.split(" ");
+//     console.log(arr[arr.length - 1].length);
+//
+// }
+//
+// lengthOfLastWord("Hello World");
+
+
+
+
+

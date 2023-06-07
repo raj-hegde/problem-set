@@ -62,6 +62,37 @@
 //
 // lengthOfLastWord("Hello World");
 
+// function Rabbit(type){
+//     this.type = type;
+// }
+// Rabbit.prototype.speak = function(line){
+//     console.log("This ${this.type} rabbit  says ${line}");
+// };
+
+// let wierdRabbit = new Rabbit("weird");
+
+// let ages = {
+//     Boris: 39,
+//     Liang: 22,
+//     Julia: 62
+// };
+
+// console.log(ages.Boris);
+// console.log("Liang" in ages);
+// console.log("mark" in ages);
+// console.log("toString" in ages);
+// console.log("valuesOf" in ages);
+
+const toStringSymbol = Symbol("toString");
+let stringObject = {
+    [toStringSymbol] () {return 'a jute tope';}
+};
+console.log(stringObject[toStringSymbol]());
+
+
+
+
+
 
 
 

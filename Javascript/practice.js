@@ -83,11 +83,24 @@
 // console.log("toString" in ages);
 // console.log("valuesOf" in ages);
 
-const toStringSymbol = Symbol("toString");
-let stringObject = {
-    [toStringSymbol] () {return 'a jute tope';}
-};
-console.log(stringObject[toStringSymbol]());
+// const toStringSymbol = Symbol("toString");
+// let stringObject = {
+//     [toStringSymbol] () {return 'a jute tope';}
+// };
+// console.log(stringObject[toStringSymbol]());
+
+// var sentence = 'This is one sentence. This is a sentence with a list of items:' +
+// 'cherries, oranges, apples, bananas. That was the list of items.';
+
+// var start = sentence.indexOf(':');
+// var end = sentence.indexOf('.', start+1);
+
+// var listStr = sentence.substring(start+1, end);
+// console.log(listStr);
+
+// var fruits = listStr.split(',');
+// console.log(fruits);
+
 
 
 

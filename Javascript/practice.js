@@ -83,11 +83,17 @@
 // console.log("toString" in ages);
 // console.log("valuesOf" in ages);
 
-const toStringSymbol = Symbol("toString");
-let stringObject = {
-    [toStringSymbol] () {return 'a jute tope';}
-};
-console.log(stringObject[toStringSymbol]());
+// const toStringSymbol = Symbol("toString");
+// let stringObject = {
+//     [toStringSymbol] () {return 'a jute tope';}
+// };
+// console.log(stringObject[toStringSymbol]());
+
+var resultString = "<p>This page \u00A9 Shelly Powers </p>";
+
+var blk = document.getElementById("result");
+blk.innerHTML = resultString;
+
 
 
 

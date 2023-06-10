@@ -89,12 +89,12 @@
 // };
 // console.log(stringObject[toStringSymbol]());
 
-<<<<<<< HEAD
-var resultString = "<p>This page \u00A9 Shelly Powers </p>";
+// var resultString = "<p>This page \u00A9 Shelly Powers </p>";
 
-var blk = document.getElementById("result");
-blk.innerHTML = resultString;
-=======
+// var blk = document.getElementById("result");
+// blk.innerHTML = resultString;
+
+
 // var sentence = 'This is one sentence. This is a sentence with a list of items:' +
 // 'cherries, oranges, apples, bananas. That was the list of items.';
 
@@ -106,7 +106,22 @@ blk.innerHTML = resultString;
 
 // var fruits = listStr.split(',');
 // console.log(fruits);
->>>>>>> d17ff94ffb2badf1bf34497ad231f31fafc84291
+
+var searchString = "Now is the time and this is the time and that is the time";
+var pattern =  /t.*(the)/ig;                // /t\w*e/g;
+// var matchArray;
+// var str = "";
+
+//check for pattern with regexp exec, if not null, process
+// while((matchArray = pattern.exec(searchString)) != null){
+//     str += "at " + matchArray.index + " we found " + matchArray[0] + "\n";
+//     //console.log(matchArray);
+// }
+// console.log(str);
+
+var result = pattern.exec(searchString);
+console.log(result);
+
 
 
 

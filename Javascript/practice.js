@@ -108,7 +108,7 @@
 // console.log(fruits);
 
 var searchString = "Now is the time and this is the time and that is the time";
-var pattern =  /t.*(the)/ig;                // /t\w*e/g;
+var pattern = /t.*(the)/ig; // /t\w*e/g;
 // var matchArray;
 // var str = "";
 

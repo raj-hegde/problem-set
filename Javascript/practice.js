@@ -107,8 +107,8 @@
 // var fruits = listStr.split(',');
 // console.log(fruits);
 
-var searchString = "Now is the time and this is the time and that is the time";
-var pattern = /t.*(the)/ig; // /t\w*e/g;
+// var searchString = "Now is the time and this is the time and that is the time";
+// var pattern = /t.*(the)/ig; // /t\w*e/g;
 // var matchArray;
 // var str = "";
 
@@ -119,10 +119,29 @@ var pattern = /t.*(the)/ig; // /t\w*e/g;
 // }
 // console.log(str);
 
-var result = pattern.exec(searchString);
-console.log(result);
+// var result = pattern.exec(searchString);
+// console.log(result);
 
+class Matrix {
+    constructor(width, height, element = (x, y) => undefined) {
+        this.width = width;
+        this.height = height;
+        this.content = [];
 
+        for (let y = 0; y < height; y++){
+            for(let x = 0; x < width; x++){
+                this.content[y * width + x] = element(x, y);
+            }
+        }
+    }
+
+    get(x, y){
+        return this.content[y * this.width + x];
+    }
+    set(x, y, value) {
+        this.content[y * this.width + x] = value;
+    }
+}
 
 
 

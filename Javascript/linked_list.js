@@ -41,3 +41,5 @@ while (current !== null){
 console.log(list)
 
 
+
+

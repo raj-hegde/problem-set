@@ -19,7 +19,7 @@ node2.next = node3
 
 let list = new LinkedList(node1)
 
-console.log(list)
+//console.log(list)
 
 if (list.head === null){
   return null;
@@ -28,8 +28,8 @@ if (list.head === null){
 let current = list.head;
 let previous = null;
 
-while (current !== null){
-  if(current.data === 5){
+while (current !== null) {
+  if(current.data === 5) {
     node1.next = node3
     break
   }
@@ -38,7 +38,23 @@ while (current !== null){
   }
 }
 
-console.log(list)
+//console.log(list)
+
+let node5 = new ListNode(15);
+node5.next = list.head;
+list.head = node5;
+
+let curr = list.head;
+let prev = null;
+
+
+let node4 = new ListNode(10);
+node4.next = node3
+node1.next = node4
+
+console.log(list);
+
+
 
 
 

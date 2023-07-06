@@ -60,7 +60,19 @@ node3.next = node6;
 
 console.log(list);
 
+function getlen() {
+    let cnt = 0;
+    let curr = list.head;
 
+    while(curr !== null) {
+        cnt++;
+        curr = curr.next;
+    }
+    return cnt;
+}
+
+
+console.log(getlen());
 
 
 

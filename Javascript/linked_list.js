@@ -54,6 +54,12 @@ node1.next = node4
 
 console.log(list);
 
+let node6 = new ListNode(18);
+node6.next = null;
+node3.next = node6;
+
+console.log(list);
+
 
 
 

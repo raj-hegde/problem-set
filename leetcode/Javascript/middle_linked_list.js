@@ -1,15 +1,10 @@
-function getlen() {
-    let cnt = 0;
-    let curr = head;
-
-    while(curr !== null) {
-        cnt++;
-        curr = curr.next;
-    }
-    return cnt;
-}
-
-
 var middleNode = function(head) {
-    
+    let fast = head;
+    let slow = head;
+    while (fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    return slow;
 };
+

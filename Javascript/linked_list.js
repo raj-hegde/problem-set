@@ -21,6 +21,8 @@ let list = new LinkedList(node1)
 
 //console.log(list)
 
+// Deleting a node
+
 if (list.head === null){
   return null;
 }
@@ -40,6 +42,8 @@ while (current !== null) {
 
 //console.log(list)
 
+// Adding a new node at the head
+
 let node5 = new ListNode(15);
 node5.next = list.head;
 list.head = node5;
@@ -47,18 +51,23 @@ list.head = node5;
 let curr = list.head;
 let prev = null;
 
+// Adding a new node in between
 
 let node4 = new ListNode(10);
 node4.next = node3
 node1.next = node4
 
-console.log(list);
+//console.log(list);
+
+// Adding a new node at the end
 
 let node6 = new ListNode(18);
 node6.next = null;
 node3.next = node6;
 
-console.log(list);
+//console.log(list);
+
+// Getting the length of the linked list
 
 function getlen() {
     let cnt = 0;
@@ -73,6 +82,21 @@ function getlen() {
 
 
 console.log(getlen());
+
+// Geeting the middle of the Linked list
+
+var middleNode = function(head) {
+    let fast = head;
+    let slow = head;
+    while (fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    return slow;
+};
+
+console.log(middleNode(list.head));
+
 
 
 

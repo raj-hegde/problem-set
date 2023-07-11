@@ -61,11 +61,6 @@
 
 // console.log(temp);
 
-const stack = [1, 2, 3];
-const position = 0;
-const replacement = 7;
 
-let temp = stack.splice(position, 1, replacement)
-console.log(stack)
 
 

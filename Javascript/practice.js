@@ -189,16 +189,16 @@
 // temp.fahrenheit = 86;
 // console.log(temp.celsius);
 
-var div,
-        container = document.getElementById('container')
+// var div,
+//         container = document.getElementById('container')
 
-for ( var i = 0; i < 5; i++) {
-    div = document.createElement('div')
-    div.onclick = function() {
-        alert('This is box #' + i)
-    }
-    container.appendChild(div)
-}
+// for ( var i = 0; i < 5; i++) {
+//     div = document.createElement('div')
+//     div.onclick = function() {
+//         alert('This is box #' + i)
+//     }
+//     container.appendChild(div)
+// }
 // class Temperature {
 //   constructor(celsius) {
 //       this.celsius = celsius;
@@ -214,15 +214,100 @@ for ( var i = 0; i < 5; i++) {
 //   }
 // }
 
-let temp = new Temperature(22);
-console.log(temp.fahrenheit);
+// let temp = new Temperature(22);
+// console.log(temp.fahrenheit);
 
-temp.fahrenheit = 86;
-console.log(temp.celsius);
-
-
+// temp.fahrenheit = 86;
+// console.log(temp.celsius);
 
 
+// Vector class 
+
+// class Vec {
+//     constructor(x, y) {
+//     this.x = x;
+//     this.y = y;
+//     }
+
+// plus(other) {
+//     return new Vec(this.x + other.x, this.y + other.y);
+// }
+
+// minus(other) {
+//     return new Vec(this.x - other.x, this.y - other.y);
+// }
+
+// get length(){
+//     return Math.sqrt(this.x * this.x + this.y + this.y);
+//  }
+// }
+
+// console.log(new Vec(1, 2).plus(new Vec(2, 3)));
+// console.log(new Vec(5, 6).plus(new Vec(7, 8)));
+// console.log(new Vec(9, 10).plus(new Vec(11, 12)));
+
+// class Group
+
+class Group {
+    constructor() {
+        this.members = [];
+    }
+
+    add(value) {
+        if(!this.has(value)) {
+            this.members.push(value);
+        }
+    }
+
+    delete(value) {
+        this.members = this.members.filter(v => v !== value);
+    }
+
+    has(value){
+        return this.members.includes(value);
+    }
+
+    static from(collection) {
+        let group = new Group;
+        for (let value of collection) {
+            group.add(value);
+        }
+        return group;
+    }
+    [Symbol.iterator]() {
+    return new GroupIterator(this);
+    }
+}
+
+class GroupIterator {
+    constructor(group) {
+        this.group = group;
+        this.position = 0;
+    }
+
+    next() {
+        if (this.position >= this.group.members.length) {
+            return {done: true};
+        } else {
+            let result = {value: this.group.members[this.position],
+                         done: false};
+            this.position++;
+            return result;
+        }
+    }
+}
+
+for (let value of Group.from(["a", "b", "c"])) {
+    console.log(value);
+}
+
+
+
+// let group = Group.from([10, 20]);
+// console.log(group.has(10));
+
+
+// Iterable groups
 
 
 

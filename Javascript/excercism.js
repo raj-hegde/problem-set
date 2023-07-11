@@ -37,28 +37,35 @@
 // code was improved later with implicit returns not literals like true or false
 
 
-function canFreePrisoner(
-  knightIsAwake,
-  archerIsAwake,
-  prisonerIsAwake,
-  petDogIsPresent
-) {
+// function canFreePrisoner(
+//   knightIsAwake,
+//   archerIsAwake,
+//   prisonerIsAwake,
+//   petDogIsPresent
+// ) {
 
 
-  if (petDogIsPresent && !archerIsAwake) { 
-      return true;
-  } else if (prisonerIsAwake && !archerIsAwake && !knightIsAwake) {
-        return true;
-  } else { return false }
-}
+//   if (petDogIsPresent && !archerIsAwake) { 
+//       return true;
+//   } else if (prisonerIsAwake && !archerIsAwake && !knightIsAwake) {
+//         return true;
+//   } else { return false }
+// }
 
-const knightIsAwake = false;
-const archerIsAwake = true; 
-const prisonerIsAwake = false;
-const petDogIsPresent = true;
+// const knightIsAwake = false;
+// const archerIsAwake = true; 
+// const prisonerIsAwake = false;
+// const petDogIsPresent = true;
 
-temp = canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent);
+// temp = canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent);
 
-console.log(temp);
+// console.log(temp);
+
+const stack = [1, 2, 3];
+const position = 0;
+const replacement = 7;
+
+let temp = stack.splice(position, 1, replacement)
+console.log(stack)
 
 

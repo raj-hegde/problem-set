@@ -79,25 +79,29 @@
 
 //console.log(chooseVehicle(option1, option2));
 
-function birdsInWeek(birdsPerDay, week) {
+// function birdsInWeek(birdsPerDay, week) {
 
-    let sum = 0;
+//     let sum = 0;
 
-    if (birdsPerDay.length % 7 !== 0) {
-        throw console.error("Not a valid week");
-    } else {
-        let index = (week * 7) - 7;
-        for (let i = index; i < index + 7; i++) {
-            sum += birdsPerDay[i];
-        }
-    }
-    return sum;
+//     if (birdsPerDay.length % 7 !== 0) {
+//         throw console.error("Not a valid week");
+//     } else {
+//         let index = (week * 7) - 7;
+//         for (let i = index; i < index + 7; i++) {
+//             sum += birdsPerDay[i];
+//         }
+//     }
+//     return sum;
+// }
+
+
+// birdsPerDay = [4, 7, 3, 2, 1, 1, 2, 0, 2, 3, 2, 7, 1, 3, 0, 6, 5, 3, 7, 2, 3];
+// //console.log(birdsPerDay.length)
+// week = 2;
+
+// console.log(birdsInWeek(birdsPerDay, week));
+
+
+function fixBirdCountLog(birdsPerDay) {
+    
 }
-
-
-birdsPerDay = [4, 7, 3, 2, 1, 1, 2, 0, 2, 3, 2, 7, 1, 3, 0, 6, 5, 3, 7, 2, 3];
-//console.log(birdsPerDay.length)
-week = 2;
-
-console.log(birdsInWeek(birdsPerDay, week));
-

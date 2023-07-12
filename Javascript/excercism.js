@@ -126,5 +126,11 @@ function chooseVehicle(option1, option2) {
 
 
 function fixBirdCountLog(birdsPerDay) {
-
+  for (let index = 0; index < birdsPerDay.length; index += 2) {
+    birdsPerDay[index]++;
+  }
+  return birdsPerDay;
 }
+
+const birdsPerDay = [3, 0, 5, 1, 0, 4, 1, 0, 3, 4, 3, 0];
+console.log(fixBirdCountLog(birdsPerDay));

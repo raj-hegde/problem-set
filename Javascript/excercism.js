@@ -125,12 +125,68 @@ function chooseVehicle(option1, option2) {
 // console.log(birdsInWeek(birdsPerDay, week));
 
 
-function fixBirdCountLog(birdsPerDay) {
-  for (let index = 0; index < birdsPerDay.length; index += 2) {
-    birdsPerDay[index]++;
+// function fixBirdCountLog(birdsPerDay) {
+//   for (let index = 0; index < birdsPerDay.length; index += 2) {
+//     birdsPerDay[index]++;
+//   }
+//   return birdsPerDay;
+// }
+
+// const birdsPerDay = [3, 0, 5, 1, 0, 4, 1, 0, 3, 4, 3, 0];
+// console.log(fixBirdCountLog(birdsPerDay));
+
+function timeToMixJuice(name) {
+  switch (name) {
+    case 'Pure Strawberry Joy':
+      return 0.5;
+    case 'Energizer':
+    case 'Green Garden':
+      return 1.5;
+    case 'Tropical Island':
+      return 3;
+    case 'All or Nothing':
+      return 5;
+    default:
+      return 2.5;
   }
-  return birdsPerDay;
 }
 
-const birdsPerDay = [3, 0, 5, 1, 0, 4, 1, 0, 3, 4, 3, 0];
-console.log(fixBirdCountLog(birdsPerDay));
+// console.log(timeToMixJuice('Green Garden'));
+
+
+// function limesToCut(wedgesNeeded, limes) {
+//   let wedges = 0;
+//   let i = 0;
+// if (wedgesNeeded){
+//   while (wedges <= wedgesNeeded && limes.length > 0) {
+//     switch (limes[0]) {
+//       case 'small':
+//         wedges += 6;
+//         break;
+//       case 'medium':
+//         wedges += 8;
+//         break;
+//       case 'large':
+//         wedges += 10;
+//         break;
+//     }
+//     limes.shift();
+//     i++;
+//   }
+//   return i;
+//  }
+//  return 0;
+// }
+
+// console.log(limesToCut(10, ['small', 'large', 'medium']));
+
+function remainingOrders(timeLeft, orders) {
+  let temp = timeLeft;
+  do {
+    temp -= timeToMixJuice(orders[0]);
+    orders.shift();
+  } while(temp > 0 && orders.length > 0);
+return orders;
+}
+
+console.log(remainingOrders(5, ['Energizer', 'All or Nothing', 'Green Garden']));

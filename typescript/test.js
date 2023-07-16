@@ -1,4 +1,10 @@
-function add(a, b) {
-    return a + b;
+function calcTax(state, income, dependents) {
+    if (state === 'NY') {
+        return income * 0.06 - dependents * 500;
+    }
+    else if (state === 'NJ') {
+        return income * 0.05 - dependents * 300;
+    }
 }
-add(10, null);
+var tax = calcTax('NJ', 50000, 2);
+console.log(tax);

@@ -309,11 +309,23 @@
 
 // Iterable groups
 
-x = new Date(Date.UTC(2011, 3, 25))
-console.log(x.toUTCString());
-if  (Date.parse('1991-03-27T01:46:40Z') === Date.UTC((1959, 6, 19))){ 
-    console.log(true)
-} else {console.log(false)}
+// x = new Date(Date.UTC(2011, 3, 25))
+// console.log(x.toUTCString());
+// if  (Date.parse('1991-03-27T01:46:40Z') === Date.UTC((1959, 6, 19))){ 
+//     console.log(true)
+// } else {console.log(false)}
+
+function calcTax(state, income, dependents) {
+    if (state == 'NY') {
+        return income * 0.06 - dependents * 500;
+    } else if(state == 'NJ') {
+        return income * 0.05 - dependents * 300;
+    }
+}
+
+let tax = calcTax('NJ', 50000, 2);
+console.log(tax);
+
 
 
 

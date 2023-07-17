@@ -180,13 +180,22 @@ function timeToMixJuice(name) {
 
 // console.log(limesToCut(10, ['small', 'large', 'medium']));
 
+/**
+ * Calculates the remaining orders that can be processed within the given time limit.
+ * @param {number} timeLeft - The time left to process orders.
+ * @param {Array} orders - The list of orders to process.
+ * @returns {Array} - The remaining orders that can be processed within the given time limit.
+ */
 function remainingOrders(timeLeft, orders) {
   let temp = timeLeft;
+
+  // Loop through the orders until the time limit is reached or there are no more orders
   do {
     temp -= timeToMixJuice(orders[0]);
     orders.shift();
   } while(temp > 0 && orders.length > 0);
-return orders;
+
+  return orders;
 }
 
-console.log(remainingOrders(5, ['Energizer', 'All or Nothing', 'Green Garden']));
+

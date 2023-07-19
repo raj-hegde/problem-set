@@ -327,18 +327,19 @@
 // console.log(tax);
 
 
-let car = {
-    brand: 'Honda',
-    model: 'Civic',
-    getBrand() {
-        return this.model;
-    }
+function Car(brand) {
+    this.brand = brand;
 }
 
-let brand = car.getBrand();
-console.log(brand);
+Car.prototype.getBrand = function() {
+    return this.brand;
+}
 
+let car = new Car('Ford');
+console.log(car.getBrand());
 
+var bmw = Car('BMW');
+console.log(bmw.getBrand);
 
 
 

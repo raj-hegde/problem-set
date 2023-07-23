@@ -1,5 +1,6 @@
-function add(b: number) {
-    return b;
+type Person = {
+    address: string;
 }
 
-console.log(add(2));
+let person2: any;
+const isPerson = (object: any): object is Person => "address" in object;

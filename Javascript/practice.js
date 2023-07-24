@@ -337,3 +337,69 @@ Person.prototype.greet = function() {
 
 let p1 = new Person('John');
 let greeting = p1.greet();
+// function Car(brand) {
+//     this.brand = brand;
+// }
+
+// Car.prototype.getBrand = function() {
+//     return this.brand;
+// }
+
+// let car = new Car('Ford');
+// console.log(car.getBrand());
+
+// var bmw = Car('BMW');
+// console.log(bmw.getBrand);
+
+// function add(a) {
+//     let sum = 0;
+//     for (let i = 0; i < arguments.length; i++) {
+//         sum += arguments[i];
+//     }
+//     return sum;
+// }
+
+// console.log(add(1, 2, 3, 4, 5));
+
+// function compareBy(propertyName){
+//     return function(a, b) {
+//         if(a[propertyName] < b[propertyName]){
+//             return -1;
+//         }
+//         if(a[propertyName] > b[propertyName]){
+//             return 1;
+//         }
+//         return 0;
+//     }
+// }
+
+// let products = [
+//     { name: 'iPhone', price: 900 },
+//     { name: 'Samsung Galaxy', price: 850 },
+//     { name: 'Sony Xperia', price: 700 },
+//   ];
+
+
+  
+//   // sort products by name
+//   console.log('Products sorted by name:');
+//   products.sort(compareBy('name'));
+  
+//   console.table(products);
+  
+//   // sort products by price
+//   console.log('Products sorted by price:');
+//   products.sort(compareBy('price'));
+//   console.table(products);
+
+// function convert(fn, length) {
+//  let con = fn === 'CmToIn' ? length / 2.54 : fn === 'InToCm' ? length * 2.54 : 'Invalid';
+//  return con;
+// }
+
+// console.log(convert('InToCm', 10));
+// console.log(convert('CmToIn', 10));
+// console.log(convert('nothing', 10));
+
+
+

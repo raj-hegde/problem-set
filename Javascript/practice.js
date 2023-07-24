@@ -327,19 +327,13 @@
 // console.log(tax);
 
 
-function Car(brand) {
-    this.brand = brand;
+function Person(name){
+    this.name = name;
 }
 
-Car.prototype.getBrand = function() {
-    return this.brand;
+Person.prototype.greet = function() {
+    return "hi I am " + this.name;
 }
 
-let car = new Car('Ford');
-console.log(car.getBrand());
-
-var bmw = Car('BMW');
-console.log(bmw.getBrand);
-
-
-
+let p1 = new Person('John');
+let greeting = p1.greet();

@@ -327,6 +327,16 @@
 // console.log(tax);
 
 
+function Person(name){
+    this.name = name;
+}
+
+Person.prototype.greet = function() {
+    return "hi I am " + this.name;
+}
+
+let p1 = new Person('John');
+let greeting = p1.greet();
 // function Car(brand) {
 //     this.brand = brand;
 // }

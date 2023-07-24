@@ -392,4 +392,31 @@
 // console.log(convert('nothing', 10));
 
 
+// function Person(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
 
+// }
+
+// let person = new Person('John', 'Doe');
+
+// Person.prototype.getFullName = function() {
+//     return this.firstName + ' ' + this.lastName;
+// }
+
+// let p1 = new Person('John', 'Doe');
+// let p2 = new Person('Jane', 'Doe');
+
+// console.log(p1.getFullName());
+// console.log(p2.getFullName());
+
+
+let person = {
+         name: 'John',
+         age: 30,
+         greet: function() {
+             return 'Hi I am' + this.firstName;
+         }
+        }
+    
+console.log(person.__proto__ === Object.prototype);

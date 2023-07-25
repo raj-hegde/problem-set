@@ -327,16 +327,16 @@
 // console.log(tax);
 
 
-function Person(name){
-    this.name = name;
-}
+// function Person(name){
+//     this.name = name;
+// }
 
-Person.prototype.greet = function() {
-    return "hi I am " + this.name;
-}
+// Person.prototype.greet = function() {
+//     return "hi I am " + this.name;
+// }
 
-let p1 = new Person('John');
-let greeting = p1.greet();
+// let p1 = new Person('John');
+// let greeting = p1.greet();
 // function Car(brand) {
 //     this.brand = brand;
 // }
@@ -421,12 +421,51 @@ let greeting = p1.greet();
 // console.log(p2.getFullName());
 
 
-let person = {
-         name: 'John',
-         age: 30,
-         greet: function() {
-             return 'Hi I am' + this.firstName;
-         }
-        }
+// let person = {
+//          name: 'John',
+//          age: 30,
+//          greet: function() {
+//              return 'Hi I am' + this.firstName;
+//          }
+//         }
     
-console.log(person.__proto__ === Object.prototype);
+// let teacher = Object.create(person);
+// teacher.name = 'John Doe';
+// console.log(Object.getPrototypeOf(teacher));
+
+//"use strict";
+// function show() {
+//     console.log(this === undefined);
+// }
+
+// show();
+
+// let person = {};
+
+// Object.defineProperty(person, 'ssn', {
+//     value: '123-45-6789',
+//     configurable: false
+// });
+
+// delete person.ssn;
+// console.log(person);
+
+// var decoration = {
+//     color: 'red'
+// };
+
+// var circle = Object.create(decoration);
+// circle.radius = 10;
+
+// for (const prop in circle) {
+//     if(circle.hasOwnProperty(prop)) {
+//         console.log(prop);
+//     }
+// }
+
+const person = {
+    firstName: 'John',
+    lastName: 'Doe'
+}
+
+console.log(person);

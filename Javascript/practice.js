@@ -463,9 +463,23 @@
 //     }
 // }
 
-const person = {
-    firstName: 'John',
-    lastName: 'Doe'
-}
+// const person = {
+//     firstName: 'John',
+//     lastName: 'Doe'
+// }
 
-console.log(person);
+//console.log(person);
+const scoreBoard = {
+    'Amil Pastorius': 99373,
+    'Min-seo Shin': 0,
+    'Jesse Johnson': 1337,
+  };
+
+  function removePlayer(scoreBoard, player) {
+    if (scoreBoard.hasOwnProperty(player)) {
+      delete scoreBoard[player];
+    } else { return scoreBoard }
+    return scoreBoard;
+  }
+
+console.log(removePlayer(scoreBoard, 'Jesse Johnson'));

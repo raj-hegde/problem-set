@@ -14,4 +14,5 @@ def gcdOfStrings(str1: str, str2: str) -> str:
         
 str1 = "AAAAAAAAA"
 str2 = "AAACCC"
+
 print(gcdOfStrings(str1, str2))

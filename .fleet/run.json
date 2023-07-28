@@ -10,8 +10,7 @@
             "type": "node",
             "name": "Node.js configuration",
             "file": "$FILE$",
+            "workingDir": "Javascript/",
         },
-        
-        
     ]
 }

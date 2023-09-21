@@ -89,8 +89,14 @@
 // };
 // console.log(stringObject[toStringSymbol]());
 
-function add(a, b) {
-	return a + b;
+function add(...args) {
+	let i = 0;
+	let temp = 0;
+	while(i < args.length) {
+		temp += args[i];
+		i++;
+	}
+	return temp;
 }
 
-console.log(add(2, 3))
+console.log(add(2, 3, 4, 5));

@@ -4,10 +4,11 @@ function mergesort(arr: number[]): number[] {
   } else {
     //splitting the array
     let left: number[] = arr.slice(0, arr.length / 2);
-    //console.log(arr1);
+    console.log(left);
     let right: number[] = arr.slice(arr.length / 2, arr.length);
-    
-    return merge(mergesort(left), mergesort(right))
+    console.log(right);
+
+    return merge(mergesort(left), mergesort(right));
   }
 }
 
@@ -16,7 +17,7 @@ function merge(left: number[], right: number[]): number[] {
   let i: number = 0;
   let j: number = 0;
 
-  for(let k: number = 0; k < left.length; k++) {
+  for (let k: number = 0; k < left.length; k++) {
     if (left[i] < right[j]) {
       result[k] = left[i];
       i += 1;
@@ -27,6 +28,5 @@ function merge(left: number[], right: number[]): number[] {
   }
   return result;
 }
-
 
 console.log(mergesort([5, 4, 1, 8, 7, 2, 6, 3]));

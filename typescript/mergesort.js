@@ -18,10 +18,12 @@ function merge(left, right) {
     for (let k = 0; k < left.length; k++) {
         if (left[i] < right[j]) {
             result[k] = left[i];
+            result[k + 1] = right[j];
             i += 1;
         }
         else {
             result[k] = right[j];
+            result[k + 1] = left[i];
             j += 1;
         }
     }

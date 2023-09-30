@@ -1,33 +1,30 @@
-function mergesort(arr) {
+function mergeSort(arr) {
     if (arr.length <= 1) {
         return arr;
     }
     else {
         //splitting the array
-        let left = arr.slice(0, arr.length / 2);
-        console.log(left);
-        let right = arr.slice(arr.length / 2, arr.length);
-        console.log(right);
-        return merge(mergesort(left), mergesort(right));
+        let left = arr.slice(0, Math.floor(arr.length / 2));
+        let right = arr.slice(Math.floor(arr.length / 2));
+        return merge(mergeSort(left), mergeSort(right));
     }
 }
+//merge subroutine
 function merge(left, right) {
     const result = [];
-    let i = 0;
-    let j = 0;
-    for (let k = 0; k < left.length; k++) {
-        if (left[i] < right[j]) {
-            result[k] = left[i];
-            result[k + 1] = right[j];
-            i += 1;
+    let leftIndex = 0;
+    let rightIndex = 0;
+    while (leftIndex < left.length && rightIndex < right.length) {
+        if (left[leftIndex] < right[rightIndex]) {
+            result.push(left[leftIndex]);
+            leftIndex++;
         }
         else {
-            result[k] = right[j];
-            result[k + 1] = left[i];
-            j += 1;
+            result.push(right[rightIndex]);
+            rightIndex++;
         }
     }
-    return result;
+    return result.concat(left.slice(leftIndex), right.slice(rightIndex));
 }
-console.log(mergesort([5, 4, 1, 8, 7, 2, 6, 3]));
+console.log(mergeSort([5, 4, 1, 8, 7, 2, 6, 3]));
 //# sourceMappingURL=mergesort.js.map

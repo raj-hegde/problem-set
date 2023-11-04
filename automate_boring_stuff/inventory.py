@@ -1,5 +1,6 @@
 stuff = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
 
+# Displays the dictionary
 def display_inventory(inventory):
     print("Inventory:")
     item_total = 0
@@ -10,6 +11,7 @@ def display_inventory(inventory):
 
 #display_inventory(stuff)
 
+# Adds inventory from list to dictionary
 def add_to_inventory(inventory, addeditmes):
     for item in addeditmes:
         if item in inventory.keys():    # checking if item exists in inventory

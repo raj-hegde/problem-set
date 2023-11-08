@@ -10,8 +10,8 @@ def display_inventory(inventory):
 
 #display_inventory(stuff)
 
-def add_to_inventory(inventory, addeditmes):
-    for item in addeditmes:
+def add_to_inventory(inventory, addeditems):
+    for item in addeditems:
         if item in inventory.keys():    # checking if item exists in inventory
             inventory[item] = inventory.get(item, 0) + 1
         else:

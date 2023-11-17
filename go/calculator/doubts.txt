@@ -2,3 +2,4 @@ What is t *testing.T?
 What is t.Parallel() - something to do with concurrency
 Errorf must be a in-built function.
 Need to know the first line of the file "package filename"
+What is "_" in for loop??

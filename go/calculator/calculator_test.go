@@ -100,3 +100,13 @@ func TestDivide(t *testing.T) {
 		}
 	}
 }
+
+func TestDivideInvalid(t *testing.T) {
+	t.Parallel()
+
+	temp, err := calculator.Divide(1, 0)
+	if err != nil {
+		t.Error("want error for invalid input, got nil")
+	}
+	print("%f", temp)
+}

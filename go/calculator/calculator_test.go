@@ -112,6 +112,39 @@ func TestDivideInvalid(t *testing.T) {
 }
 
 // This is for floating point precision
+
+func TestSqrt(t *testing.T) {
+	t.Parallel()
+	type testCase struct {
+		a    float64
+		want float64
+	}
+
+	testCases := []testCase{
+		{a: 2, want: 1.4142},
+		{a: 16, want: 4},
+		{a: 4, want: 2},
+	}
+
+	for _, tc := range testCases {
+		got, err := calculator.Sqrt(tc.a)
+		if err != nil {
+			t.Fatalf("want no error for valid input, got %v", err)
+		}
+		if !closeEnough(tc.want, got, 0.01) {
+			t.Errorf("Sqrt(%f): want %f, got %f", tc.a, tc.want, got)
+		}
+	}
+}
+
 func closeEnough(a, b, tolerance float64) bool {
 	return math.Abs(a-b) <= tolerance
+}
+func TestSqrtInvalid(t *testing.T) {
+	t.Parallel()
+
+	_, err := calculator.Sqrt(-1)
+	if err == nil {
+		t.Error("want error for invalid input, got nil")
+	}
 }

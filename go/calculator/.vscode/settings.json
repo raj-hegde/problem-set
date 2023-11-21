@@ -1,3 +1,4 @@
 {
-  "editor.fontFamily": "JetBrains Mono"
+  "editor.fontFamily": "JetBrainsMono",
+  "editor.fontSize": 14
 }

@@ -148,3 +148,4 @@ func TestSqrtInvalid(t *testing.T) {
 		t.Error("want error for invalid input, got nil")
 	}
 }
+

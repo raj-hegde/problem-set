@@ -16,8 +16,8 @@ function merge(left: number[], right: number[]): number[] {
   let leftIndex: number = 0;
   let rightIndex: number = 0;
 
-  while(leftIndex < left.length && rightIndex < right.length) {
-    if(left[leftIndex] < right[rightIndex]) {
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
       result.push(left[leftIndex]);
       leftIndex++;
     } else {
@@ -27,6 +27,5 @@ function merge(left: number[], right: number[]): number[] {
   }
   return result.concat(left.slice(leftIndex), right.slice(rightIndex));
 }
-
 
 console.log(mergeSort([5, 4, 1, 8, 7, 2, 6, 3]));

@@ -1,11 +1,11 @@
 import readline
 puzzle2 = open("/home/rajeev/personal/advent_code/advent2020/adventpuzzle_2.txt", "r")
 temp = 0
-x = []
+x: list[str] = []
 count = []
 match = []
 for i in range(1):
-    line = "6-12 f: mqcccdhxfbrhfpf"
+    line: str = "6-12 f: mqcccdhxfbrhfpf"
     for i in line:
         if i.isalpha():
             match.append(i)

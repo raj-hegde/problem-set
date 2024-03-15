@@ -24,3 +24,4 @@ function karatsuba(x, y) {
 }
 console.log(karatsuba(1, 7));
 //# sourceMappingURL=karatsuba.js.map
+

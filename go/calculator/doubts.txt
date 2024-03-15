@@ -1,6 +1,0 @@
-What is t *testing.T?
-What is t.Parallel() - something to do with concurrency
-Errorf must be a in-built function.
-Need to know the first line of the file "package filename"
-What is "_" in for loop?? - Arbitrary variable for which value is not needed.
-red, green, refactor cycle || red - failing test | green - beautifying the code | refactor - improving the code.

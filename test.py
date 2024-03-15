@@ -1,9 +1,12 @@
-def testing(a: int) -> str:
-    return str(a)
+def testing(b: int) -> str:
+    return str(b)
 
 
 testing(2)
 
 
 def nice(b: str):
-    pass
+    print(b)
+
+
+
